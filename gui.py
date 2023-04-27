@@ -27,10 +27,10 @@ class MyApp(tk.Frame):
 
         # Correct answer
         self.correct_answer = tk.StringVar()
-        self.correct_label = tk.Label(self, text="Correct Answer")
-        self.correct_label.grid(row=2, column=0, padx=5, pady=5)
-        self.correct_entry = tk.Entry(self, textvariable=self.correct_answer)
-        self.correct_entry.grid(row=2, column=1, padx=5, pady=5)
+        self.correct_label = tk.Label(self.master, text="Correct Answer", fg="white", bg="black")
+        self.correct_label.grid(row=0, column=2, padx=5, pady=5)
+        self.correct_entry = tk.Entry(self.master, textvariable=self.correct_answer, fg="white", bg="black")
+        self.correct_entry.grid(row=0, column=3, padx=5, pady=5)
 
         # Compare button
         self.compare_button = tk.Button(self, text='Compare', command=self.compare_texts)
