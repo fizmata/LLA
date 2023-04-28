@@ -1,4 +1,8 @@
 import tkinter as tk
+<<<<<<< HEAD
+import signal
+
+=======
 from api import API
 
 class MyApp(tk.Frame):
@@ -72,4 +76,15 @@ class MyApp(tk.Frame):
 
         print("Results saved to 'results.txt'")
 
+>>>>>>> 9bb8b82eccdceb507684bc0499dc953f0500b32c
 
+def init(root):
+    root.title('LLApp')
+    
+    button = tk.Button(root, text="Exit", command=stop_recording)
+    button.pack()
+    return root
+
+
+def stop_recording():
+    signal.signal(signal.SIGINT)

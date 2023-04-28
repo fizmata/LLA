@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+google-cloud-speech==2.19.0
+google-cloud-texttospeech==2.14.1
+google-cloud==0.34.0
+numpy==1.23.5
+protobuf==3.6.1
+sounddevice==0.4.6
+soundfile==0.12.1
+=======
 # Add the required libraries and their versions here:
 requests==2.25.1
 sounddevice==0.4.1
@@ -6,3 +15,4 @@ numpy==1.24.3
 scipy==1.7.1
 Levenshtein
 pyaudio
+>>>>>>> 9bb8b82eccdceb507684bc0499dc953f0500b32c
