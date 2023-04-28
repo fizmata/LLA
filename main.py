@@ -6,9 +6,6 @@ import subprocess
 import threading
 import tkinter as tk
 
-def ylr():
-    return 'usdsgsgs'
-
 def main():
     root = tk.Tk()
     root.title('LLApp')
