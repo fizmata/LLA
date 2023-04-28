@@ -5,7 +5,6 @@ import signal
 import subprocess
 import threading
 import tkinter as tk
-<<<<<<< HEAD
 
 def ylr():
     return 'usdsgsgs'
@@ -25,20 +24,6 @@ def main():
     start_button.pack()
     
     root.mainloop()
-=======
-from gui import MyApp
-from api import API
-import os
-
-os.environ['TK_SILENCE_DEPRECATION'] = '1'
-
-def main():
-    root = tk.Tk()
-    api_key = 'YZD2ZA6BSWCKQGKJJZWXAICJTHUV3IXP'
-    api = API(api_key)
-    app = MyApp(api, master=root)
-    app.mainloop()
->>>>>>> 9bb8b82eccdceb507684bc0499dc953f0500b32c
 
 if __name__ == "__main__":
     main()
