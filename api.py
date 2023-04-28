@@ -23,3 +23,8 @@ def transcribe_file(speech_file):
 
     print("Waiting for operation to complete...")
     response = operation.result(timeout=90)
+
+    for result in response.results:
+        # The first alternative is the most likely one for this portion.
+        return ("Transcript: {}".format(result.alternatives[0].transcript))
+        # print("Confidence: {}".format(result.alternatives[0].confidence))
