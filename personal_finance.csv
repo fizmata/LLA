@@ -1,0 +1,12 @@
+Type,Category,Amount,Date
+Income,Salary,250,2023-06-01
+Expense,Rent,1000,2023-06-03
+Expense,Groceries,200,2023-06-04
+Income,Investment,300,2023-06-05
+Expense,Utilities,150,2023-06-06
+Expense,Transportation,100,2023-06-07Income,Salary,5000,2023-06-01
+Income,Part-time Job,200,2023-06-02
+Expense,Rent,1000,2023-06-03
+Expense,Groceries,200,2023-06-04
+Income,Food,3000.0,2023-11-02
+Income,Rent,3000.0,2023-11-02
