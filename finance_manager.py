@@ -37,3 +37,17 @@ class PersonalFinanceManager:
                     expense_by_category[line[1]] += float(line[2])
 
         return expense_by_category
+    
+    def set_budget(self, category, budget):
+        with open('budget.csv', mode='a') as file:
+            writer = csv.writer(file)
+            writer.writerow([category, budget])
+
+    def check_budget(self, category, amount):
+        with open('budget.csv', 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if row[0].lower() == category.lower():
+                    if float(row[1]) < amount:
+                        return False
+        return True
