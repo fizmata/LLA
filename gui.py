@@ -1,4 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLineEdit, QLabel, QMessageBox
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QLineEdit, QLabel, QMessageBox, QDialog, QDateEdit
+from PyQt5.QtCore import QDate
 from finance_manager import PersonalFinanceManager
 
 
@@ -45,7 +46,9 @@ class FinanceApp(QWidget):
         self.layout.addWidget(QLabel("Amount:"))
         self.layout.addWidget(self.amount_input)
 
-        self.date_input = QLineEdit()
+        self.date_input = QDateEdit()
+        self.date_input.setDisplayFormat("yyyy-MM-dd")
+        self.date_input.setDate(QDate.currentDate())
         self.layout.addWidget(QLabel("Date (YYYY-MM-DD):"))
         self.layout.addWidget(self.date_input)
 
@@ -72,8 +75,12 @@ class FinanceApp(QWidget):
 
     def add_entry(self):
         try:
-            self.finance_manager.add_entry(self.entry_type_input.text(), self.category_input.text(
-            ), float(self.amount_input.text()), self.date_input.text())
+            self.finance_manager.add_entry(
+                self.entry_type_input.text(),
+                self.category_input.text(),
+                float(self.amount_input.text()),
+                self.date_input.date().toString("yyyy-MM-dd")
+            )
             QMessageBox.information(
                 self, "Success", "Entry added successfully!")
         except Exception as e:
